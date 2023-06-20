@@ -1,0 +1,60 @@
+@import '../../styles/common.scss';
+
+
+.addServiceModal {
+    position: relative;
+    @include flexColumn();    
+    align-items: flex-start;    
+    height: 210px;
+    padding: 0 226px;
+
+    .inputArea {
+        @include flexRow();
+        color: #4E4E4E;
+        padding:10px 0;
+        span {
+            @include notosans(14px, 700);
+            margin-right: 20px;
+            white-space: nowrap;
+        }
+
+        input {
+            border: none;
+            border-bottom: 1px solid #4E4E4E;
+            background-color: transparent;
+            padding: 9px 0;
+            width: 420px;
+            @include notosans(14px, 400);
+            margin-right: 26px;
+        }
+
+        input::placeholder {
+            color: #9e9e9e;
+            @include notosans(13px, 400);
+        }
+
+        button {
+            cursor: pointer;
+            width: 112px;
+            padding: 6px 0;
+            border: 1px solid #3b3f91;
+            border-radius: 7px;
+            background-color: #4c52bc;
+            color: #ffffff;
+            @include notosans(14px, 700);
+        }
+
+        .key {
+            @include notosans(14px, 400);
+            white-space: pre-wrap;
+            word-break: break-all;
+            margin-right: 0px;
+        }
+
+        .copyIcon {
+            margin-left: 5px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+    }
+}

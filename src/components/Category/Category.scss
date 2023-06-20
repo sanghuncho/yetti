@@ -1,0 +1,19 @@
+@import '../../styles/common.scss';
+
+.category {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    margin: 20px 80px 11px;
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    p {
+        margin-left: 5px;
+        color: #707070;
+        @include notosans(13px, 400)
+    }
+}

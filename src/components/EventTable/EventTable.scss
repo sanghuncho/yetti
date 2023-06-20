@@ -1,0 +1,225 @@
+@import '../../styles/common.scss';
+
+.eventTable {
+    @include flexColumn();
+    padding-left: 50px;
+
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        width: 1470px;
+        margin: 20px 0;
+    }
+    
+    .eventTableArea {
+        width: fit-content;
+        max-height: 397px;
+        // margin-bottom: 27px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border-radius: 15px;
+
+        &:hover {
+            &::-webkit-scrollbar-thumb{
+                background-color: rgba(0,0,0,0.5);
+            }
+        }
+    }
+
+    .eventListTable {
+        width: 1180px !important;
+        line-height: 1.5;
+        // margin-bottom: 27px;
+    }
+
+    .eventListTable th {
+        height: 36px;
+        border-right: 1px solid #686868;
+        background-color: #444444;
+        color: white;
+        white-space: nowrap;
+        position: -webkit-sticky;  top: 0; /* Safari */
+        position: sticky; top: 0;
+        @include notosans(13px, 700);
+       
+        .checkbox {
+            @include flexRow;
+            path { fill: #E5F3FF; }
+        }
+    }
+
+    .eventListTable .eventLine {
+        cursor: pointer;
+    }
+   
+    .eventListTable td {
+        height: 36px;
+        padding: 0 12px;
+        border-right: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee;
+        white-space: nowrap;
+        overflow:hidden;
+        text-overflow: ellipsis;
+        color: #555555;
+          border-radius: 0;
+        @include notosans(12px,400);
+
+        span {
+            width: 100%;
+            vertical-align: middle;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            -ms-user-select: none;
+            -moz-user-select: -moz-none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            user-select: none;
+        }
+
+        .checkbox {
+            @include flexRow;
+            path { fill: #444444; }
+        }
+    }
+  
+    .eventListTable tr {
+        
+        .type_crash {display:block; margin:0 auto;padding:2px 7px;border-radius:3px;border:1px solid #f4d9db;background-color:#feeaeb;color:purple;font-size:10px;}
+        .type_fatal {display:block; margin:0 auto;padding:2px 7px;border-radius:3px;border:1px solid #d7ecf8;background-color:#e4fcff;color:#e0262b;font-size:10px;}
+        .type_nelog {display:block; margin:0 auto;padding:2px 7px;border-radius:3px;border:1px solid #f6e0c9;background-color:#ffedd7;color:#e28100;font-size:10px;}
+
+        background-color: #ffffff;
+        
+        th:nth-child(1), td:nth-child(1){            
+            @include tableWidth(80px);
+        }
+
+        th:nth-child(2), td:nth-child(2){
+            @include tableWidth(80px);
+        }
+
+        th:nth-child(3), td:nth-child(3){
+            @include tableWidth(110px);
+        }
+
+        th:nth-child(4), td:nth-child(4){
+            @include tableWidth(130px);
+        }
+
+        // th:nth-child(5), td:nth-child(5){
+        //     @include tableWidth(80px);
+        // }
+
+        th:nth-child(5), td:nth-child(5){
+            @include tableWidth(127px);
+            // @include tableWidth(200px);
+        }
+        th:nth-child(6), td:nth-child(6){
+            @include tableWidth(573px);
+        }
+
+        th:nth-child(7), td:nth-child(7){
+            @include tableWidth(140px);
+        }
+
+        th:nth-child(8), td:nth-child(8){
+            @include tableWidth(100px);
+        }
+
+        th:nth-child(9), td:nth-child(9){
+         	
+            @include tableWidth(150px);
+            
+        }
+        td:nth-child(4),
+        td:nth-child(6),
+        td:nth-child(7) {
+            text-align: left;
+        }
+        th:nth-child(9) {
+            border-right:0;
+        }
+    }
+    .eventListTable tr:hover {
+        background-color: #f7f7f7;
+    }
+    .noData {
+        margin-top: 50px;
+        color: #4c52bc;
+        @include notosans(20px, 700);
+    }
+    .evtTbleSwich {
+        background-color:#ffffff;
+        box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.15);
+        border-radius:5px;
+        padding:9px  10px 9px 15px;
+        .swichLabel {
+            margin-right:70px;
+            display: inline-block;
+            font-weight: 400;
+            font-size:14px;            
+            height: 19px;
+            color: #616161;
+            span {
+                font-weight: 700; 
+                color:#4c52bc;
+
+            }
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+            outline: none;
+            vertical-align:middle;
+           
+        }
+        .switch input {
+            position: absolute;
+            top: -99999px;
+            left: -99999px;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #e2e2e2;
+            -webkit-transition: .2s;
+            transition: .2s;
+            border-radius: 24px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.7);
+            -webkit-transition: .2s;
+            transition: .2s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #4c52bc;
+        }
+    
+        input:checked + .slider:before {
+            -webkit-transform: translateX(25px);
+            -ms-transform: translateX(25px);
+            transform: translateX(25px);
+        }
+
+    }
+
+
+}

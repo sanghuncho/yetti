@@ -1,0 +1,203 @@
+@import './common.scss';
+
+.join {
+    @include loginArea;
+
+    .stepImage {
+        width: 412px;
+        height: 55px;
+        margin: 46px -11px 0;
+    }
+
+    .input-form {
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+
+        div {
+            position:relative;
+        }
+    }
+
+    .input-name {
+        color: #4E4E4E;
+        @include notosans(14px, 700);
+
+        span {
+            margin-left: 5px;
+            color: #FF2020;
+        }
+    }
+
+    .input{
+        @include inputStyle(#808080, #C1C1C1);
+    }
+
+    .input::placeholder{
+        @include notosans(13px, 400);
+    }
+
+    .input-red {
+        @include inputStyle($redColor, $redColor);
+    }
+
+    button[type="submit"] {
+        @include buttonStyle(100%,  60px);
+    }
+    button[type="submit"]:disabled {
+        background-color: #B5B5B5;
+        color: #808080;
+    }
+
+    .text-error {
+        // position: absolute;
+        // bottom:-40px;
+        left:0;
+        margin: 0;
+        color: $redColor;
+        @include notosans(12px, 400);
+    }
+    .txtErr2 {
+        position: absolute;
+        left:0;
+        bottom:-25px !important;
+    }
+    
+
+    .bottom-area {
+        gap: 50px;
+
+        span {
+        	margin-top: 10px;
+            color: #C1C1C1;
+            @include notosans(14px, 400);
+        }
+
+        button {
+        	margin-top: 10px;
+            border: none;
+            border-bottom: 1px solid #4E4E4E;
+            background-color: white;
+            @include notosans(14px, 700);
+        }
+    }
+
+    .memberInfo, .confirm{
+        .explain {
+            h2 {
+                margin-top: 43px;
+            }
+            p {
+                margin-bottom: 40px;
+            }
+        }
+
+        .email-pass {
+            display: block;
+            position: absolute;
+            bottom:5px;
+            left:0;
+            color: #6CE378;
+            @include notosans(12px, 400);
+        }
+
+        .check-button {
+            cursor: pointer;
+            @include buttonStyle02();
+            padding: 3px 24px;
+            margin-top:5px;
+            float: right;
+            @include notosans(11px, 400);
+        }
+
+        button[type="submit"] {
+            margin-top: 55px ;
+        }
+    }
+    .inputDiv {
+        position:relative;
+    }
+
+    .termOfUse {
+        h2 {
+            margin: 60px 0 19px;
+
+            span {
+                margin-left: 5px;
+                color: #FF2020;
+            }
+        }
+
+        .term-area {
+            border: solid#C4CEE1;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        .check-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 12px;
+
+            label {
+                cursor: pointer;
+                width: 30px;
+                height: 30px;
+                margin-right: 13px;
+            }
+
+            span {
+                @include notosans(16px, 700);
+            }
+
+            .arrow {
+                cursor: pointer;
+                width: 24px;
+                height: 24px;
+                margin-left: auto;
+            }
+        }
+
+        button[type="submit"] {
+            margin-top: 127px;
+        }
+    }
+
+    .verifyEmail, .done {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .sendImage {
+            width: 200px;
+            height: 168px;
+            margin: 80px 0 54px;
+        }
+
+        .welcomeImage {
+            width: 200px;
+            height: 200px;
+            margin: 58px 0 42px;
+        }
+
+        .explain {
+            h2, p{
+                margin: 0 -20px;
+                text-align: center;
+            }
+    
+            p {
+                margin-top: 5px;
+            }
+        }
+
+        button[type="submit"] {
+            margin-top: 35px ;
+        }
+    }
+}

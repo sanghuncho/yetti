@@ -1,0 +1,60 @@
+@import '../../styles/common.scss';
+
+.deleteServiceModal {
+    position: relative;
+    @include flexColumn();
+    gap: 18px;
+    align-items: flex-start;
+
+    height: 100%;
+    padding-left: 226px;
+
+    .inputArea {
+        @include flexRow();
+        color: #4E4E4E;
+
+        span {
+            @include notosans(14px, 700);
+            margin-right: 90px;
+        }
+
+        input {
+            border: none;
+            border-bottom: 1px solid #4E4E4E;
+            background-color: transparent;
+            padding: 9px 0;
+            width: 350px;
+            @include notosans(14px, 400);
+        }
+
+        input:placeholder {
+            color: #B5B5B5;
+        }
+    }
+
+    .buttonArea {
+        align-self: flex-end;
+        margin-right: 50px;
+        
+        button {
+            cursor: pointer;
+            width: 112px;
+            padding: 10px 0;
+            border: none;
+            border-radius: 10px;
+        }
+
+        button:nth-child(1) {
+            background-color: #B5B5B5;
+            color: #4E4E4E;
+            @include notosans(14px, 700);
+            margin-right: 10px;
+        }
+
+        button:nth-child(2) {
+            background-color: #FF2020;
+            color: white;
+            @include notosans(14px, 700);
+        }
+    }
+}

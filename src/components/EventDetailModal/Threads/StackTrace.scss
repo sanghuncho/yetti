@@ -1,0 +1,116 @@
+
+.stackFrameRoot {
+    color: #757575;
+
+    .stackFrame.title {
+        top: 5px;
+        position: absolute;
+        border-bottom: 1px solid #e6e6e6;
+        font-weight: bold;
+    }
+
+    .stackFrame {
+        width: 100%;
+
+        svg {
+            fill: white;
+        }
+        .android svg {
+            background-color: #3ddc84;
+        }
+
+        .java svg {
+            background-color: #615644;
+        }
+
+        .framework svg {
+            background-color: #FC8339;
+        }
+
+        .dylib svg {
+            background-color: #7D477D;
+        }
+
+        .core svg {
+            background-color: #cfb335;
+            opacity: 0.8;
+        }
+
+        .userModule svg {
+            background-color: #3187F0;
+        }
+
+        li {
+            height: 2.2em;
+            display: flex;
+            flex-direction: row;
+
+
+            .frameIcon {
+                display: flex;
+                display: none; /* 1.6.x 에서는 experimental */
+                align-items: center;
+
+                width: 2em;
+                margin-left: 1em;
+                text-align: right;
+
+                .iconContainer {
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        width: 2em;
+                        height: 2em;
+                        display: inline-block;
+                        margin: auto;
+                        border-radius: 3px;
+                        padding: 2px;
+
+                    }
+                }
+            }
+
+            .frameNumber {
+                display: flex;
+                align-items: center;
+
+                text-align: left;
+                width: 3em;
+                margin-left: 1em;
+            }
+
+            .frameModule {
+                display: flex;
+                align-items: center;
+
+                width: 15em;
+            }
+
+            .frameAddress {
+                display: flex;
+                align-items: center;
+
+                width: 12em;
+                text-align: right;
+                margin-right: 1em;
+            }
+
+            .frameContents {
+                display: flex;
+                align-items: center;
+            }
+
+        }
+        li:hover {
+            font-weight: bold;
+        }
+
+        li:not(.title):hover {
+            cursor: pointer;
+            background-color: #fff7d1;
+            color: #77562b;
+        }
+    }
+
+}

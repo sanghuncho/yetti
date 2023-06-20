@@ -1,0 +1,17 @@
+@import '../../styles/common.scss';
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: #F9F8F8;
+    min-width: 1920px;
+    // min-height: 1080px;
+    min-height: 930px;
+    width: 100vw;
+    height: 100vh;
+
+    main {
+        flex: 1;
+    }
+}

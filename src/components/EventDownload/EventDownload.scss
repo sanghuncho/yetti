@@ -1,0 +1,24 @@
+@import '../../styles/common.scss';
+
+.eventDownload {
+
+    button {
+        cursor: pointer;
+        user-select : none;
+        border:1px solid #c7c7c7;
+        border-radius:7px;
+        padding: 7px 17px;
+        margin-left: 5px;
+        color: white;
+        @include notosans(13px, 700);
+        background-color: #4c52bc;
+    }
+
+    button:disabled {
+        color: #969696;
+        background-color: #c7c7c7;
+        border:1px solid #c7c7c7;
+        cursor: default;
+    }
+
+}

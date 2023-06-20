@@ -1,0 +1,9 @@
+@import '../../styles/common.scss';
+
+.titleStyle {
+    display: inline-block;
+    color: #444444;
+    @include notosans(18px, 700);
+    padding: 6px 24px 6px 0;
+    background-color: #ffffff !important;
+}

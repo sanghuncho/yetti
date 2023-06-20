@@ -1,0 +1,19 @@
+@import '../../styles/common.scss';
+
+.pagination {
+    @include flexRow();
+    align-self: flex-end;
+    user-select : none;
+
+    span {
+        color: #4E4E4E;
+        @include notosans(12px, 600);
+        margin: 0 15px;
+    }
+    svg {
+        border:1px solid #bebebe;
+        background-color:#ffffff;
+        padding:5px;
+        border-radius:5px;
+    }
+}

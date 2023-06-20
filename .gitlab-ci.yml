@@ -1,0 +1,37 @@
+variables:
+  PACKAGENAME: "CAPTAIN-SERVICE"
+  TARGET: "${PACKAGENAME}_${CI_COMMIT_TAG}._${CI_PIPELINE_IID}.zip"
+  PACKAGE_REGISTRY_URL: "${CI_API_V4_URL}/projects/47/packages/generic/${PACKAGENAME}/${CI_COMMIT_TAG}"
+  PACKAGES_PRIVATE_TOKEN: "CW9WxBqEyfsqdzbBiahe"
+
+stages:
+  - build
+  - upload
+
+build:
+  stage: build
+  tags:
+    - nodejs_18
+  script:
+    - node -v
+    - npm i
+    - npm run pack -- --name=_${CI_PIPELINE_IID}
+  cache:
+    paths:
+      - ./node_modules/
+  artifacts:
+    paths:
+      - ./${PACKAGENAME}_*_${CI_PIPELINE_IID}.zip 
+
+upload-package:
+  stage: upload
+  rules:
+   - if: $CI_COMMIT_TAG !~ "/^$/" && $CI_PIPELINE_SOURCE =~ 'push'
+  tags:
+    - nodejs_18
+  script:
+    - 'curl --header "PRIVATE-TOKEN: ${PACKAGES_PRIVATE_TOKEN}" --upload-file ${TARGET} ${PACKAGE_REGISTRY_URL}/${TARGET}'
+  dependencies:
+    - build
+
+  

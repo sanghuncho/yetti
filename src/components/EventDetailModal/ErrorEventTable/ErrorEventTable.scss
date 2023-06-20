@@ -1,0 +1,90 @@
+@import '../../../styles/common.scss';
+
+.errorEventConts {
+    flex:1 1;
+    height:calc(100% - 1px );
+    background-color:#ffffff;
+    border-radius: 0 0 15px 0;
+    padding:0;
+    .fixed-table-container {
+        width: 100%;
+        height:100%;
+       
+        position: relative;
+        font-size:11px;
+
+        .table-wrapper {
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 100%;
+
+            table {
+                width: 100%;
+                table-layout: fixed;
+                border-collapse: collapse;
+
+                th {
+                    font-weight: bold;
+                    height: 25px; /* header-bg height값 */
+                    background:#ffffff;
+                    border-bottom: 1px solid #e6e6e6;
+                    vertical-align: middle;
+                }
+
+                @keyframes fadein {
+                    from {
+                        opacity: 0.0;
+                    }
+                    to {
+                        opacity: 1.0;
+                    }
+                }
+
+                tr:hover {
+                    cursor: pointer;
+                    background-color:#eaf8fb;
+                    td {color:#4c52bc;}
+
+                    .copyIcon {
+                        animation-name: fadein;
+                        animation-duration: 0.3s;
+                        animation-fill-mode: forwards;
+                    }
+                }
+                tr.on {
+                    background-color: #eaf8fb;
+                    td {color: #4c52bc;}
+                }
+                td {
+                    color:#757575;
+                    padding: 1px;
+                }
+                td + td {
+                    
+                }
+                th:nth-child(1),td:nth-child(1){text-align: center;}
+                th:nth-child(2),td:nth-child(2){text-align: center;}
+                th:nth-child(3),td:nth-child(3){text-align: left;}
+                th:nth-child(4),td:nth-child(4){text-align: center;}
+
+                td {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space:nowrap;
+                }
+
+                th {
+                    padding: 0px; /* reset */
+                }
+                .copyIcon {
+                    opacity: 0;
+                    vertical-align: middle;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+            
+        }
+
+    }
+}

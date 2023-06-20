@@ -1,0 +1,8 @@
+@import '../../styles/common.scss';
+
+.mainCollapse {
+    @include flexColumn();
+
+    height: 433px;
+    padding-left: 45px;
+}

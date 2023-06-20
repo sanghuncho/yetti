@@ -1,0 +1,14 @@
+@import '../../styles/common.scss';
+
+.eventChart {
+    width: 1500px;
+    height: 350px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    z-index: 12;
+    
+    .apexChart {
+        z-index: 12;
+    }
+}

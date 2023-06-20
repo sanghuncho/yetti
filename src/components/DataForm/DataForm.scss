@@ -1,0 +1,22 @@
+@import '../../styles/common.scss';
+
+.dataform {
+    margin-top:10px;
+    
+    h5 {
+        display: inline-block;
+        // border-top-left-radius: 15px;
+        // border-top-right-radius: 15px;
+        // background-color: #4770bb;
+        color: #444444;
+        @include notosans(20px, 700);
+        padding: 10px 0;
+    }
+
+    .content {
+        width: 1500px;
+        // height: 222px;
+        
+        
+    }
+}

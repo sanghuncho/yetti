@@ -1,0 +1,47 @@
+@import '../../styles/common.scss';
+
+.dataPickerArea{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .datePickerInput {
+        width: 145px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+		border: 1px solid #b1b1b1;
+        background-color: #FFFFFF;
+        border-radius:7px;
+        
+        .dataPicker {
+            border: none;
+            background-color: transparent;
+        }
+        .icon {
+            padding: 0 2px;
+        }
+    }
+
+    .contour{
+        width: 15px;
+        height: 3px;
+        background-color: #696969;
+        margin: 0 10px
+    }
+
+    .react-datepicker-wrapper {
+        width: auto;
+    }
+
+    .react-datepicker__input-container input {
+        width: 120px;
+        border: none;
+        padding: 10px 13px;
+        background-color: transparent;
+        color: #808080;
+        @include notosans(14px, 400);
+      }
+
+}

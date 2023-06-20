@@ -1,0 +1,425 @@
+@import './common.scss';
+.management::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+.management {
+    height: 100vh;
+    // min-height: 1080px;
+    min-height: 930px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+    .mydata {
+        @include flexRow;
+        margin-bottom: 25px;
+        padding: 20px 0;
+        background-color: white;
+        border-radius: 10px;       
+        justify-content: flex-start;
+    }
+
+    .mydata .profile1 {
+        @include flexColumn();
+        width: 380px;
+        gap: 10px;
+
+        .userIcon {
+            width: 100px;
+            height: 100px;
+        }
+
+        .name {
+            @include flexRow();
+            // border-bottom: 1px solid #4e4e4e;
+            
+            input {
+                width: 152px;
+                border: none;
+                color: #4E4E4E;
+                background-color:#ffffff;
+                text-align: center;
+               @include notosans(18px, 700);
+            }
+
+            .editIcon {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+    .mydata .profile2 {
+        flex: 1;
+        padding-left: 60px;
+        border-left: 1px solid #E8E8E8;
+
+        @include flexColumn();
+        align-items: flex-start;
+
+        .titleStyle {
+            width: 112px;
+            color:#4c52bc;
+            @include notosans(16px, 700);
+        }
+
+        p {
+            color: #4E4E4E;
+            @include notosans(16px, 400);
+        }
+
+        .email {
+            margin-bottom: 15px;
+        }
+
+        .permission {
+            margin-bottom: 30px;
+
+            p {
+                .validIcon,
+                .invalidIcon {
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 5px;
+                }
+            }
+
+            .status {
+                width: 120px;
+                padding: 2px 7px;
+                border-radius: 3px;
+                border: 1px solid #f4d9db;
+                font-size: 10px;
+                font-weight: bold;
+                user-select: none;
+                display: flex;
+                align-items: center;
+            }
+
+            .valid { background-color: #c8ffd0; }
+            .invalid { background-color: #feeaeb; }
+        }
+
+        .password {
+            .pwdblock {
+                display: inline-block;
+            }
+            
+            .changePassword {
+                cursor: pointer;
+                border-radius:7px;
+                padding:7px 20px;
+                background-color:#ffffff;
+                border:1px solid #444444;
+                color: #444444;
+                @include notosans(13px, 400);
+                float: left;
+                margin-right: 8px;                
+            }
+
+            input {
+                width: 270px;
+                border: none;
+                border: 1px solid #808080;
+                padding: 7px 0;
+                border-radius: 7px;
+                margin-right: 8px;
+                color: #4E4E4E;
+                text-indent:10px;
+                @include notosans(13px, 400);
+                
+                margin-top: 5px;
+            }
+
+
+            input::placeholder {
+                color: #808080;
+            }
+
+            button {
+                cursor: pointer;
+                color: #ffffff;                
+                @include notosans(13px, 400);
+				border: 1px solid #4c52bc;
+                border-radius: 7px;
+                padding: 7px 16px;
+                background-color: #4c52bc;
+                margin-right: 10px;
+                margin-top: 5px;
+                width: 130px;
+            }
+            .pwInfo {
+                font-size: smaller;
+                // margin-top: 20px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .service {
+        .serviceTable {
+            width: 60em;
+            line-height: 1.5;
+            border-style: hidden;
+            border-radius: 10px;
+        }
+
+        .serviceTable th {
+            height: 35px;
+            border-right: 1px solid #f1f1f1;
+            background-color: #444444;
+            color: white;
+            white-space: nowrap;
+           @include notosans(12px, 600);
+        }
+
+    
+        .serviceTable td {
+            height: 35px;
+            padding: 0 0;
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis;
+            border-right: 1px solid #f1f1f1;
+            border-bottom: 1px solid #eeeeee;
+            color: #4E4E4E;
+            @include notosans(12px, 400);
+ 
+            .logDelete {
+                cursor: pointer;
+                border: 1px solid #afafaf;
+                border-radius:3px;
+                padding:0 5px;
+                color: #636363;
+                @include notosans(11px, 400);
+                background-color: #ffffff;
+            }
+            .logDelete:hover {
+ 
+                border: 1px solid #000000;     
+                color: #000000;
+            }
+
+            .removeIcon {
+                cursor: pointer;
+                width:20px;
+                height:20px;
+                margin-top:1px;
+            }
+            
+        }
+        // .serviceTable td:hover{ text-decoration: underline;}
+        .serviceTable tr {
+            background-color: #ffffff;
+            
+            th:first-child {
+                border-radius: 10px 0 0 0 ;
+            }
+            th:last-child {
+                border-radius: 0 10px  0 0 ;
+            }
+            th:nth-child(1), td:nth-child(1) {
+                @include tableWidth(auto);
+            }
+    
+            th:nth-child(2), td:nth-child(2) {
+                @include tableWidth(15em);
+            }
+    
+            th:nth-child(3), td:nth-child(3) {
+                @include tableWidth(15em);
+            }
+    
+            th:nth-child(4), td:nth-child(4) {
+                @include tableWidth(6em);
+            }
+        }
+
+        .other tr:hover {
+            td {
+                font-weight: normal !important;
+                cursor: default;
+            }
+        }
+        .serviceTable tr:last-child {
+            td:first-child {
+                border-radius:0 0 0 10px;
+            }
+            td:last-child {
+                border-radius: 0  0 10px 0 ;
+            }
+        }
+
+        .serviceTable tr:hover {
+            background-color: #f2fcff;
+            td {font-weight: bold;}
+        }
+        
+        .detail {
+            background-color: #ffffff;
+            @include flexColumn();
+            gap: 50px;
+            padding:20px 0;
+
+            .service {
+                @include flexColumn();
+                align-items: flex-start;
+                gap: 10px;
+                width: 600px;
+                // border: 1px solid #e7e7e7;
+                border-radius: 5px;
+                background-color: #f1f1f1;
+                padding: 12px 60px;
+
+                color: #4E4E4E;
+                @include notosans(14px, 700);
+
+                .dataArea {
+                    @include flexRow();
+                    align-items: flex-start;
+                  
+                    
+                
+
+                    .title {
+                        @include notosans(14px, 700);
+                        margin-right: 50px;
+                        
+                        
+                    }
+
+                    .data {
+                        text-align: start;
+                        overflow: hidden;
+                        white-space: pre-wrap;
+                        word-break: break-all;
+
+                        .copyIcon {
+                            margin-left: 5px;
+                            vertical-align: middle;
+                            cursor: pointer;
+                        }
+                    }
+    
+                    span {
+                        @include notosans(12px, 400);
+                        
+                    }
+                    span:last-child {
+                        @include notosans(14px, 400);
+                    }
+    
+                    button {
+                        border: 1px solid #3b3f91;
+                        border-radius:5px;
+                        color: #ffffff;
+                        @include notosans(12px, 700);
+                        padding:2px 25px;
+                        background-color: #4c52bc;
+                    }
+
+                    input {
+                        width: 210px;
+                        height:25px;
+                        margin-right:20px;
+                        padding: 10px 0;
+                        color: #4E4E4E;
+                        @include notosans(12px, 400);
+                        border: none;
+                        border-bottom: 1px solid #808080;
+                    }
+
+                    input::placeholder {
+                        color: #bebebe;
+                    }
+                }
+            }
+
+            .permission {
+                @include flexColumn();               
+                align-items: flex-start;
+                
+
+                p {
+                    color: #4E4E4E;
+                    @include notosans(13px, 700);
+                }       
+                
+                .permissionTable {
+                    width: 700px;
+                    line-height: 1.5;
+                    border-style: hidden;
+                    border: 1px solid #dddcdc;
+                 
+
+                }
+        
+                .permissionTable th {
+                    height: 28px;
+                    background-color: #efeff0;               
+                    border-radius: 0;
+                    color: #4c52bc;
+                    white-space: nowrap;
+                    border-right: 1px solid #dddcdc;
+                    border-bottom: 1px solid #dddcdc;
+                    @include notosans(12px, 600);
+                }
+        
+            
+                .permissionTable td {
+                    height: 30px;
+                    padding: 0px 12px;
+                    border-right: 1px solid #dddcdc;
+                    border-bottom: 1px solid #dddcdc;
+                    color: #4E4E4E;
+                    @include notosans(12px, 400);
+                    
+                }
+                .permissionTable td:last-child {
+                    border-right:0;
+                   
+                }
+             
+                .permissionTable tr {
+                         
+                    th:nth-child(1), td:nth-child(1) {
+                        @include tableWidth(50%);
+                    }
+            
+                    th:nth-child(2), td:nth-child(2) {
+                        @include tableWidth(30%);
+                    }
+            
+                    th:nth-child(3), td:nth-child(3) {
+                        @include tableWidth(10%);
+                    }
+                }
+            }
+        }
+
+        .addServiceFrame {
+            width: 100%;
+            text-align: center;
+
+
+        .addService {
+            display:inline-block;
+            cursor: pointer;
+            border-radius:7px;
+            padding:6px 30px;
+            background-color:#ffffff;
+            border:1px solid #444444;
+            color: #444444;
+            @include notosans(14px, 700);
+            margin-top: 30px;
+            margin-bottom: 20px;
+		}
+
+        }
+    }
+}
+
+.management > *:nth-child(n+2) {
+    margin-left: 2em;
+}

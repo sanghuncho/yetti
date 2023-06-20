@@ -1,0 +1,44 @@
+site_name: AppCatch
+use_directory_urls: false
+theme:
+  name: material
+  logo: assets/appcatch_logo.png
+  favicon: assets/appcatch_logo.png
+  palette: 
+    primary: white
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+copyright: Copyright &copy; YettieSoft
+extra:
+  generator: false
+extra_css:
+  - stylesheets/custom.css
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - tables
+site_dir: api
+
+nav:
+  - 개요: "index.md"
+  - 설치 방법:
+    - Android:
+      - Android 시작하기: "installation/android/android_summary.md"
+      - Crash/Log 설정: "installation/android/android_setting.md"
+      - WebView 설정: "installation/android/android_webview.md"
+    - iOS:
+      - iOS 시작하기: "installation/ios/ios_summary.md"
+      - Crash/Log 설정: "installation/ios/ios_setting.md"
+      - WebView 설정: "installation/ios/ios_webview.md"

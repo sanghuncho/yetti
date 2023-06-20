@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+
+    &:hover {
+        &::-webkit-scrollbar-thumb{
+            background-color: rgba(156, 154, 154, 0.5);
+        }
+    }
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    //min-width: 1920px;
+    min-width: 100%;
+    // min-height: 1080px;
+    min-height: 930px;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    overflow-x: hidden;
+    // overflow-y: hidden;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+// macos style scroll
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0);
+}

@@ -1,0 +1,23 @@
+@import '../../styles/common.scss';
+
+.checkbox {
+    display: flex;
+    align-items: center;
+   
+    label {
+        @include flexRow;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-left:0px;
+    }
+
+    span {
+        @include notosans(12px, 400);
+       
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+		margin-left:0px;
+    }
+}

@@ -1,0 +1,116 @@
+// Color
+$redColor: #FF2020;
+
+@mixin notosans($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+    font-family: 'Noto Sans KR','Apple SD Gothic Neo',Sans-serif;
+    line-height: 1.5;
+}
+
+@mixin loginArea() {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    height: 750px;
+    border: 2px solid #ebebeb;
+    background-color:#ffffff;
+    box-shadow: 0px 15px 16px #00000020; 
+    border-radius: 30px;
+    padding: 44px 71px;
+    margin-top:-140px;
+
+    h1 {
+        color: #4E4E4E;
+        text-align: center;
+        @include notosans(30px, 700);
+    }
+
+    .center-area {
+        width: 100%;
+        height: 100%;
+
+        h2 {
+            color: #4c52bc;
+            @include notosans(18px, 700);
+        }
+
+        p {
+            color: #808080;
+            @include notosans(13px, 400);
+        }
+    }
+
+    .bottom-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 -20px;
+    }
+}
+
+@mixin inputStyle($borderColor, $placeholderColor) {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-bottom: solid $borderColor;
+    border-width: 1px;
+    color: #4E4E4E;
+    @include notosans(16px, 400);
+
+    &::placeholder {
+        color: $placeholderColor;
+    }
+}
+
+@mixin buttonStyle($width, $height) {
+    width: $width;
+    height: $height;
+    border: none;
+    border-radius: 10px;
+    background-color: #4c52bc;
+    color: white;
+    text-align: center;
+    @include notosans(16px, 700);
+}
+
+@mixin buttonStyle02() {
+    border: 1px solid #4c52bc;
+    border-radius: 7px;
+    background-color: white;
+    color: #4c52bc;
+    text-align: center;
+    @include notosans(14px, 400);
+}
+
+@mixin flexColumn() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexRow() {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+    
+@mixin tableWidth($width) {
+    width: $width;
+    max-width: $width;
+    min-width: $width;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.sidebar-button-frame {
+    height: 166px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 23px;
+    margin-bottom: 2.5em;
+}

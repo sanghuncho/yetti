@@ -1,0 +1,51 @@
+@import '../../styles/common.scss';
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dddddd;
+    background-color:#ffffff;
+    height: 60px;
+    min-height: 60px;
+    padding-left: 200px;
+
+    .eventNav {
+        @include flexRow;
+    }
+
+    .user {
+        @include flexRow;
+        user-select: none;
+        border:1px solid #ffffff;
+        border-radius: 30px;
+        ul {
+            position: relative;
+        }
+    }
+    .period {
+        @include flexRow;
+        user-select: none;
+        border:1px solid #d3d3d3;
+        border-radius: 30px;
+        margin-right: 7px;
+        ul {
+            position: relative;
+        }
+    }
+    .user .dropDown {
+        min-width: 150px;
+        margin-right: 35px;
+        
+
+        &:hover .userDropdown {
+            display: inline;
+        }
+
+        .userDropdown {
+            display: none;
+        }
+    }
+}

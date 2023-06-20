@@ -1,0 +1,111 @@
+@import '../../styles/common.scss';
+
+.eventFilter,
+.eventFilter-hide {
+    position:absolute;
+    background-color: #4c52bc;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 4px 4px 4px #00000026;
+    padding: 140px 70px 0 38px;
+    max-width: 350px;
+    height: 100vh;
+    // min-height: 1080px;
+    min-height: 930px;
+    z-index: 50;
+	transition: all 0.8s;
+
+    .contents {
+        height: 95%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-right: 15px;
+
+        .area {
+            margin-bottom: 25px;
+
+            .sub {
+                margin-left: 20px;
+                padding-left: 15px;
+                border-left: 1px solid #B7D2FF;
+            }
+        }
+    }
+
+    .contents::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .contents::-webkit-scrollbar-thumb {
+        background-color: white;
+        border-radius: 5px;
+    }
+    
+    .filter-button {
+        cursor: pointer;
+        width: 30px;
+        height: 166px;
+    }
+}
+
+.eventFilter-hide {
+    width: 60px;
+    margin: 0;
+    padding: 140px 0 0 0;
+
+    .contents {
+        display: none;
+    }
+
+    .filter-button {
+        right: 50%;
+        transform: translate(50%, 0%);
+        margin-right: 0;
+		opacity: 0.4;
+    }
+}
+
+.selectedFilter{
+    position: absolute;
+
+    width: 4px;
+    height: 130px;
+    bottom: 0;
+    right: 0;
+    margin-right: 6px;
+    margin-bottom: 38px;
+
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+        
+   
+    @keyframes gradient {
+        0% {
+            background-position: 0% 20%;
+        }
+        10% {
+            background-position: 20% 50%;
+        }
+        30% {
+            background-position: 50% 70%;
+        }
+        40% {
+            background-position: 70% 100%;
+        }
+
+        60% {
+            background-position: 100% 70%;
+        }
+        70% {
+            background-position: 70% 50%;
+        }
+        90% {
+            background-position: 50% 20%;
+        }
+        100% {
+            background-position: 0% 20%;
+        }
+    }
+
+}

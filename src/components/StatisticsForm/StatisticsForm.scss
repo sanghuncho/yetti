@@ -1,0 +1,64 @@
+@import '../../styles/common.scss';
+
+.statisticsForm {
+    // width: 1400px;
+    // border:1px solid #dfdfdf;
+    // background-color: white;
+    // border-radius: 20px;
+    padding: 12px 20px;
+    display: flex;
+
+    .title {
+        margin-bottom: 20px;
+    }
+
+    .explain {
+        display: inline-block;
+        color: #4E4E4E;
+        @include notosans(13px, 700);
+        margin: 20px 15px;
+    }
+
+    .eventStatus {
+        @include flexRow();
+        justify-content: flex-start;
+        gap: 30px;
+
+        .textDataBox {
+            padding: 32px 40px;
+            border: 2px solid #C4CEE1;
+            border-radius: 20px;
+    
+            p {
+                color: #4E4E4E;
+                @include notosans(16px, 700);
+                margin-bottom: 15px;
+            }
+    
+            .contents {
+                margin-left: 75px;
+                margin-bottom: 5px;
+            }
+    
+            .contents span {
+                color: #6588CD;
+                @include notosans(16px, 700);
+            }
+        }
+    }
+
+    .eventContents {     
+
+        p {
+            color: black;
+            @include notosans(13px, 700);
+            margin: 15px 0; 
+        }
+
+        
+
+    }
+               
+}
+
+

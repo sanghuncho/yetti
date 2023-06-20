@@ -1,0 +1,47 @@
+@import '../../styles/common.scss';
+
+
+.navUserName {
+    border:1px solid #ffffff !important;
+}
+.navButton {
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 10px 0 20px;
+    background-color: transparent;
+    border-radius: 30px;    
+    margin-right:7px;
+
+    span {
+        color: #4E4E4E;
+        @include notosans(14px, 700);
+        margin-right: 30px;
+    }
+    .icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .icon path {
+        stroke: #666666;
+    };
+}
+
+.navButton-hide {
+    background-color: #f0f1ff;
+    border:1px solid #4c52bc;
+   
+
+    span {
+        color:#3e44b9;
+    }
+
+    .icon path {
+        stroke: #3e44b9;
+    };
+}
+

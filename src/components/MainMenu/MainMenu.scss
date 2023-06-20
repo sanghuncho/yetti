@@ -1,0 +1,136 @@
+@import '../../styles/common.scss';
+
+.mainMenu {
+    width: 250px;
+    height: 100%;
+    background-color: #313131;
+    padding: 40px 30px;
+    position: relative;
+    transition: all 0.5s;
+
+    h1 {
+        padding-left: 18px;
+        margin-bottom: 60px;
+        color: #a8a8a8;
+        @include notosans(25px, 700);
+    }
+    
+    .subButton,
+    button {
+        cursor: pointer;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        padding: 12px 18px;
+        
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+		transition: all 2s;
+
+        .icon {
+            width: 26px;
+            height: 26px;
+            margin-right:12px;
+        }
+
+        .icon path {
+            fill: #8F8F8F;
+        }
+
+        span {
+            color: #8F8F8F;
+            @include notosans(15px, 700);
+        }
+        h5{
+            color: #8F8F8F;
+            @include notosans(13px, 700);
+            text-indent: 2em;
+            padding-top: 0px;
+            height: 15px;
+        }
+    }
+
+    .subButton{
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+
+    .focused {
+        background-color: #535353;
+        border-radius: 10px;
+
+        .icon path {
+            fill: white;
+        }
+        span {
+            color: white;
+        }
+    }
+
+    .menu-button {
+        cursor: pointer;
+        width: 30px;
+        height: 108px;
+        opacity: 0.4;
+    }
+
+}
+.mainMenu-hide {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 0;
+	transition: all 0.5s;
+
+    h1 {
+        padding-left:0;
+        margin-bottom:70px;
+        @include notosans(14px, 700);
+    }
+    .subButton,
+    button {
+        
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+		transition: all 0.3s;
+        .icon {
+            margin-top: 4px;
+            margin-right: 0;
+            width:34px;
+            height:34px;
+        }
+
+        span {
+            color: #8F8F8F;
+            @include notosans(12px, 700);
+            letter-spacing: -0.02rem;
+        }
+
+        h5{
+            color: #8F8F8F;
+            @include notosans(10px, 700);
+            text-indent: 0;
+            padding-top: 0px;
+            height: 12px;
+        }
+
+    }
+
+    .menu-button {
+        right: 50%;
+        transform: translate(50%, 0%);
+        margin-right: 0;
+		opacity: 0.4;
+    }
+    .focused {
+        border-radius:0;
+        background-color: #1d1d1d;
+        transition: all 0.5s;
+    }
+
+}

@@ -1,0 +1,29 @@
+@import '../../../styles/common.scss';
+
+.icon-option {
+    position: relative;
+    .warninIcon {
+        .st0{
+            fill:#FF0000 !important;
+        }
+        width: 5px;
+        height: 5px;
+        margin-left: 5px;
+        position: absolute;
+        top: 50%;
+    }
+}
+
+.icon-singleValue {
+    position: relative;
+    .warninIcon {
+        .st0{
+            fill:#FF0000 !important;
+        }
+        width: 5px;
+        height: 5px;
+        margin-left: 5px;
+        position: absolute;
+        top: 40%;
+    }
+}

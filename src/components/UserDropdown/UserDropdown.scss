@@ -1,0 +1,38 @@
+@import '../../styles/common.scss';
+
+.userDropdown {
+    width: 150px;
+    background-color: white;
+    box-shadow: 0 4px 4px #00000040;
+    list-style: none;
+    z-index: 30;
+    
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-80%, 0);
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 7px 21px 7px;
+
+    li {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: #4E4E4E;
+        @include notosans(12px, 700);
+        padding: 10.5px 0;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    li:last-child {
+        border-bottom: 0;
+    }
+
+    .icon {
+        margin-right: 8px;
+    }
+    
+}

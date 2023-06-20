@@ -1,0 +1,26 @@
+@import '../../styles/common.scss';
+
+.snsLogin {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+
+    border: none;
+    border-radius: 15px;
+    box-shadow: 3px 3px 4px #0000001A;
+
+    img {
+        width: 40px;
+        height: 40px;
+        margin-left: 22px;
+        margin-right: 46px;
+    }
+
+    span {
+        @include notosans(20px, 700);
+    }
+}

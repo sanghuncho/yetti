@@ -1,0 +1,234 @@
+@import '../../styles/common.scss';
+
+.eventSearch {
+    width: 1500px;
+    height: 350px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    z-index: 12;
+    border:2px solid #dfdfdf;
+	@include flexRow();
+
+    .searchBtn {
+        width: 235px;
+        padding-right:30px;
+        height: 100%;
+        padding-left: 0;
+        border-right: 1px solid #E8E8E8;
+        @include flexColumn();
+        align-items: flex-start;
+        gap: 10px;
+
+        .colorBtn {
+            position: relative;
+            width: 100%;
+
+            span{
+                position:absolute;
+                width: 8px;
+                height: 8px;
+                border-radius:5px;
+                right : 5px;
+                top : 11px;
+            }
+            .period{
+                background-color : #ff5f5a;
+            }
+            .serviceName{
+                background-color : #ffbe2e;
+            }
+            .eventType{
+                background-color : #2aca44;
+            }
+            .device{
+                background-color : #9cdcfe;
+            }
+            .os{
+                background-color : #ce9178;
+            }
+            .crashType{
+                background-color : #a586c0;
+            }
+
+        }
+
+        button {
+            cursor: pointer;
+            width:100%;
+            text-align:left;
+            border: none;
+            background-color: transparent;
+            padding: 5px 18px 5px 10px;
+            border-radius: 7px;
+            color: #4E4E4E;
+            @include notosans(14px, 700);
+        }
+    }
+
+    .searchContents {
+        width: 385px;
+        height: 100%;
+        // margin-right: 50px;
+        padding: 20px 30px 15px 40px;
+        // border-left: 2px solid #E8E8E8;
+        border-right: 1px solid #E8E8E8;
+        display: flex;
+        flex-direction: column;
+
+        .searchBar {
+            position: relative;
+            width: 100%;
+            height: 52px;
+            margin-bottom: 26px;
+
+            input {
+                width: 100%;
+                height: 52px;
+                border: none;
+                border-bottom: 2px solid #4c52bc;
+                color: black;
+                @include notosans(14px, 500);
+            }
+
+            input::placeholder {
+                color: #808080;
+                @include notosans(14px, 500);
+            }
+
+            .icon {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform:translate(0, -50%)
+            }
+        }
+        
+        .checkboxList {
+            flex: 1;
+            overflow: auto;
+        }
+        
+        .checkboxList::-webkit-scrollbar {
+            width: 8px;
+        }
+    
+        .checkboxList::-webkit-scrollbar-thumb {
+            background-color: #808080;
+            border-radius: 5px;
+        }
+    }
+
+    .checkedItems {
+        flex: 1;
+        height: 100%;
+        // background-color: #eeeeee;
+        border-radius: 18px;
+        
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column-reverse;
+
+        .contents {
+            height: 100%;
+            overflow: auto;
+            margin-bottom: 12px;
+
+            .checkedItem {
+                position: relative;
+                max-width: 250px;
+                overflow: hidden;
+                display: inline-flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                border-radius: 30px;
+                background-color: #F2F6FF;
+                padding: 8px 16px 8px 25px;
+                color: #4c52bc;
+                @include notosans(14px, 700);
+                margin: 5px 0;
+                margin-left: 10px;
+
+                span {
+                    flex: 1;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .colorItem{
+                    position:absolute;
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 5px;
+                    left: 10px;
+                }
+                .period{
+                    background-color : #ff5f5a;
+                }
+                .serviceName{
+                    background-color : #ffbe2e;
+                }
+                .eventType{
+                    background-color : #2aca44;
+                }
+                .device{
+                    background-color : #9cdcfe;
+                }
+                .os{
+                    background-color : #ce9178;
+                }
+                .crashType{
+                    background-color : #a586c0;
+                }
+                .icon {
+                    cursor: pointer;
+                    margin-left: 6px;
+                }
+            }
+        }
+        
+        .contents::-webkit-scrollbar {
+            width: 8px;
+        }
+    
+        .contents::-webkit-scrollbar-thumb {
+            background-color: #808080;
+            border-radius: 5px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            align-self: flex-end;
+            gap: 8px;
+            margin-top: 10px;
+
+            .init {
+                width: 120px;
+                border: 1px solid #4c52bc;
+                border-radius: 7px;
+                padding: 8px;
+                background-color: white;
+                color: #4c52bc;
+                @include notosans(13px, 700);
+
+            }
+            .search:hover {
+                opacity: 0.8;
+                text-decoration: underline;
+            }
+            .search {
+                width: 120px;
+                border: none;
+                border-radius: 7px;
+                padding: 8px;
+                background-color: #4c52bc;
+                color: white;
+                @include notosans(13px, 700);
+            }
+        }
+    }
+}

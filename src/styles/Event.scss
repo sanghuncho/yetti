@@ -1,0 +1,15 @@
+@import './common.scss';
+
+.eventStyle {
+    .eventNav {
+        .period .dropDown {
+            &:hover .periodDropdown {
+                display: inline;
+            }
+
+            .periodDropdown {
+                display: none;
+            }
+        }
+    }
+}

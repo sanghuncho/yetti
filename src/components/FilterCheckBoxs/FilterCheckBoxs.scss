@@ -1,0 +1,19 @@
+@import '../../styles/common.scss';
+
+.filterCheckBoxs{
+    .checkbox {
+        display: flex;
+        align-items: center;
+    
+        input {
+            display: none;
+        }
+    
+        .icon {
+            display: flex;
+            align-items: center;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+    }
+}

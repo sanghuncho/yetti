@@ -1,0 +1,242 @@
+@import './common.scss';
+.guide::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+@media screen and (min-width: 700px) {
+    .guide {
+    height: 100vh;
+    // min-height: 1080px;
+    min-height: 930px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+    .guide_contents{
+        margin-top: 2em;
+        
+        // margin-left: 10em;
+        justify-content: flex-start;
+        width: 94%;
+        display: flex;
+        float: left;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 32px 0px 38px 30px;
+        vertical-align: center;
+
+        button {
+            cursor: pointer;
+            color: #000;                
+            @include notosans(13px, 400);
+            border: 1px solid #ffffff00;
+            border-radius: 7px;
+            padding: 7px 16px;
+            margin-right: 8px;
+            background-color: #ffffff00;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            margin-left:30px;
+        }
+
+        .icon path {
+            fill: #4c52bc;
+        }
+
+        .link {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            fill: #000;
+        }
+
+        .info {
+            font-size: 16px;
+            margin-left: 80px;
+        }
+
+    }
+
+    .faq {
+        margin-top: 3em;
+        margin-left: 3em;
+        width: 90%;
+        min-width: 600px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 32px 0px 38px 30px;
+        //vertical-align: left;
+        float: left;
+        .icon {
+            width: 40px;
+            height: 40px;
+            margin-left:30px;
+            margin-right:10px;
+            fill: #4c52bc;
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            fill: #000;
+        }
+
+        .question {
+            margin-left: 40px;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+
+            .icon {
+                margin-left: 0px;
+                width: 28px;
+                height: 28px;
+                fill: #4c52bc;
+                background-color: #ffffff00;
+                border-color: #ffffff00;
+            }
+        }
+
+        .answer {
+            margin-left: 40px;
+            margin-top: 15px;
+            line-height: 1.5em;
+
+            .important {
+                background-color: #efefef;
+            }
+        }
+
+    }
+
+
+}
+}
+@media screen and (max-width: 700px) {
+    .guide {
+        height: 100vh;
+        // min-height: 1080px;
+        min-height: 930px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    
+        .guide_contents{
+            margin-top: 2em;
+            // margin-left: 10em;
+            justify-content: flex-start;
+            width: 94%;
+            display: flex;
+            float: left;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 32px 0px 38px 30px;
+            vertical-align: center;
+    
+            button {
+                cursor: pointer;
+                color: #000;                
+                @include notosans(13px, 400);
+                border: 1px solid #ffffff00;
+                border-radius: 7px;
+                padding: 7px 16px;
+                margin-right: 8px;
+                background-color: #ffffff00;
+            }
+    
+            .icon {
+                width: 30px;
+                height: 30px;
+                margin-left:30px;
+            }
+    
+            .icon path {
+                fill: #4c52bc;
+            }
+    
+            .link {
+                width: 20px;
+                height: 20px;
+                margin-left: 10px;
+            }
+    
+            .title {
+                font-size: 22px;
+                font-weight: bold;
+                fill: #000;
+            }
+    
+            .info {
+                font-size: 16px;
+                margin-left: 80px;
+            }
+    
+        }
+    
+        .faq {
+            margin-top: 3em;
+            margin-left:3em;
+            width: 60%;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 32px 0px 38px 30px;
+            vertical-align: left;
+
+            .icon {
+                width: 40px;
+                height: 40px;
+                margin-left:30px;
+                margin-right:10px;
+                fill: #4c52bc;
+            }
+    
+            .title {
+                font-size: 22px;
+                font-weight: bold;
+                fill: #000;
+            }
+    
+            .question {
+                margin-left: 40px;
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+    
+                .icon {
+                    margin-left: 0px;
+                    width: 28px;
+                    height: 28px;
+                    fill: #4c52bc;
+                    background-color: #ffffff00;
+                    border-color: #ffffff00;
+                }
+            }
+    
+            .answer {
+                margin-left: 40px;
+                margin-top: 15px;
+                line-height: 1.5em;
+    
+                .important {
+                    background-color: #efefef;
+                }
+            }
+    
+        }
+    
+    
+    }
+}
+

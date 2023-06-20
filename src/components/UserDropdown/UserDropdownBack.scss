@@ -1,0 +1,11 @@
+@import '../../styles/common.scss';
+.periodDropDownBack {
+    width: 150px;
+    background-color: transparent;
+    position: absolute;
+    z-index: 30;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 7px 21px 22px;   
+}
+

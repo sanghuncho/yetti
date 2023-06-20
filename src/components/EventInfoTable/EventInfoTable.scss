@@ -1,0 +1,129 @@
+@import '../../styles//common.scss';
+
+.eventInfoTable {
+    margin-top: 48px;
+
+    .tableArea {
+        width: 100%;
+        height: 420px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .infoTable {
+        width: 100%;
+        margin: 0;
+        overflow-y: auto;
+    }
+
+    .infoTable .crashDate {
+        position: relative;
+
+        .icon {
+            cursor: pointer;
+            position: absolute;
+            left: 0;
+            margin-left: 20px;
+        }
+    }
+
+    .infoTable tr {
+        border: 1px solid #B9B9B9;
+
+        th:nth-child(1), td:nth-child(1){
+            padding: 0;
+            @include tableWidth(250px);
+        }
+
+        th:nth-child(2), td:nth-child(2){
+            @include tableWidth(320px);
+        }
+
+        th:nth-child(3), td:nth-child(3){
+            @include tableWidth(410px);
+        }
+
+        th:nth-child(4), td:nth-child(4){
+            @include tableWidth(180px);
+        }
+    }
+
+    .infoTable th {
+        height: 50px;
+        border-right: 1px solid #B9B9B9;
+        background-color: #C4CEE1;
+        color: #4E4E4E;
+        @include notosans(16px, 700);
+    }
+
+    .infoTable td {
+        height: 50px;
+        border-right: 1px solid #B9B9B9;
+        background-color: #FFFFFF;
+        color: #4E4E4E;
+        @include notosans(14px, 400);
+    }
+
+    .foldingRow {
+        @include flexRow();
+        padding: 24px 0;
+
+        .crashThread {
+            width: 1000px;
+            border: 2px solid #C4CEE1;
+            border-radius: 20px;
+            padding: 46px 61px;
+            overflow:auto;
+        }
+    
+        .crashFrame {
+            width: 100%;
+            @include flexRow();
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: start;
+            margin-bottom: 30px;
+			cursor: pointer;
+
+            white-space: pre-wrap;
+            word-break: break-all;
+            
+            div:nth-child(1){
+                width: 5%;
+                color: #4E4E4E;
+                @include notosans(14px, 400);
+            }
+
+            div:nth-child(2){
+                width: 50%;
+                color: #4E4E4E;
+                @include notosans(14px, 400);
+            }
+
+            div:nth-child(3){
+                width: 30%;
+                margin-left: 20px;
+                color: #6588CD;
+                @include notosans(14px, 400);
+            }
+
+            div:nth-child(4){
+                width: 10%;
+                margin-left: 20px;
+                color: #6588CD;
+                @include notosans(14px, 400);
+            }
+
+            div:nth-child(5){
+                width: 15%;
+                margin-left: 20px;
+                color: #6588CD;
+                @include notosans(14px, 400);
+            }
+
+            span {
+                cursor: pointer;
+            }
+        }
+    }
+}
