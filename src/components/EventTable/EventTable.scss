@@ -2,14 +2,14 @@
 
 .eventTable {
     @include flexColumn();
-    padding-left: 50px;
-
+    padding-left: 10px;
+    
     .top{
         display: flex;
         align-items: center;
         justify-content: space-between; 
         width: 1470px;
-        margin: 20px 0;
+        margin: 20px;
     }
     
     .eventTableArea {
@@ -19,7 +19,7 @@
         overflow-y: auto;
         overflow-x: hidden;
         border-radius: 15px;
-
+        align-items: left;
         &:hover {
             &::-webkit-scrollbar-thumb{
                 background-color: rgba(0,0,0,0.5);
@@ -151,6 +151,7 @@
         margin-top: 50px;
         color: #4c52bc;
         @include notosans(20px, 700);
+        
     }
     .evtTbleSwich {
         background-color:#ffffff;

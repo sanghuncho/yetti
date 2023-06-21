@@ -2,7 +2,12 @@
 
 .mainCollapse {
     @include flexColumn();
-
     height: 433px;
     padding-left: 45px;
+    width: 80%;
+}
+
+.contentArea {
+    float: left;
+    width: 90%;
 }
