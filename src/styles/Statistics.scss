@@ -8,7 +8,12 @@
     overflow-y: scroll; 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+    margin-right: 100px;
+    // .navbar {
+    //     width: 100%;
+    //     overflow: auto;
+    // }
 
     .children {
         @include flexRow();
