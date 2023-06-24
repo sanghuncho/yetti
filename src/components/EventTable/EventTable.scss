@@ -225,3 +225,21 @@
 
 
 }
+
+@media screen and (min-width: 1800px) {
+    
+}
+@media screen and (max-width: 1800px) {
+    .eventTable {
+        .noData {
+            margin-top: 50px;
+            margin-right: 200px;
+            color: #4c52bc;
+            width: 300px;
+            @include notosans(20px, 700);
+        }
+    }
+}
+@media screen and (max-width: 1300px) {
+    
+}
