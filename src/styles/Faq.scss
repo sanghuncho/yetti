@@ -5,15 +5,13 @@
 
 .guide {
     height: 100vh;
-    // min-height: 1080px;
     min-height: 930px;
     overflow-y: auto;
-    min-width: 600px;
     overflow-x: scroll;
+    min-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: left;
-
     .guide_contents{
         margin-top: 2em;
         // margin-left: 10em;
@@ -64,14 +62,11 @@
             margin-left: 80px;
         }
     }
-    .navbar {
-        width: 100%;
-    }
     .faq {
         margin-top: 3em;
         margin-left: 3em;
         margin-right: 3em;
-        width: 90%;
+        width: 80%;
         min-width: 600px;
         overflow-x: scroll;
         background-color: #fff;
@@ -118,13 +113,4 @@
     }
 }
 
-@media screen and (min-width: 1800px) {
-    
-}
-@media screen and (max-width: 1800px) {
-    
-}
-@media screen and (max-width: 1300px) {
-    
-}
 

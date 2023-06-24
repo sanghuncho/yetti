@@ -2,7 +2,7 @@
 
 .dataform {
     margin-top:10px;
-    
+    margin-left: 3em;
     h5 {
         display: inline-block;
         // border-top-left-radius: 15px;
@@ -16,7 +16,19 @@
     .content {
         width: 1500px;
         // height: 222px;
-        
-        
     }
+}
+
+@media screen and (min-width: 1800px) {
+
+}
+@media screen and (max-width: 1800px) {
+    // .dataform {
+    //     .content {
+            
+    //     }
+    // }
+}
+@media screen and (max-width: 1300px) {
+    
 }

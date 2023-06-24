@@ -291,7 +291,7 @@ const Statistics = () => {
     return (
         <Layout>
             <div className='statistics'>
-            <Navbar/>
+                <Navbar/>
                 <Category text='통계 / 리포트' />
                 <DataForm title='기간별 통계 생성'>
                     <div className='children'>
