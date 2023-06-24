@@ -129,6 +129,16 @@ const EventsCount = ({statisticsList, startDate, endDate}) => {
         },
       };
 
+    const getChartWidth = () => {
+        console.log("window.innerWidth: " + window.innerWidth);
+        let result
+        if(window.innerWidth < 1800 && window.innerWidth > 1300){
+            result = 280
+        } else if (window.innerWidth >= 1800){
+            result = 400
+        }
+        return result
+    }
     return (
         <div className="">            
                 {/*<p>App 별 이용 현황(일 평균 활성화 단말 수)</p>*/}

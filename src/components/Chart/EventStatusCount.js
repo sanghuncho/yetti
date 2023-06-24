@@ -53,12 +53,21 @@ const EventStatusCount = ({statisticsList}) => {
             }]
         }
     };
-
+    const getChartWidth = () => {
+        console.log("window.innerWidth: " + window.innerWidth);
+        let result
+        if(window.innerWidth < 1800 && window.innerWidth > 1300){
+            result = 280
+        } else if (window.innerWidth >= 1800){
+            result = 380
+        }
+        return result
+    }
     return (
         <div className="grpContChart">
            <h3>이벤트 종류별 비율</h3>
             <div>
-                <ReactApexChart options={chart.options} series={chart.series} type="donut" width={380} />
+                <ReactApexChart options={chart.options} series={chart.series} type="donut" width={getChartWidth()} />
             </div>
         </div>
     );
