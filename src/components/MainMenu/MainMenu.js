@@ -65,29 +65,25 @@ const MainMenu = React.memo(() => {
             <div>
                 <button className={pathname === routes.event ? 'focused' : null} onClick={handleClickEvent}>
                     <EventIcon className='icon' />
-                    <span>이벤트</span>
+                    <span className='menuEvent'>이벤트</span>
                 </button>
                 <button className={pathname === routes.statistics ? 'focused' : null} onClick={handleClickStatistics}>
                     <StatisticsIcon className='icon' />
-                    <span>통계/리포트</span>
+                    <span className='menuStat'>통계/<br/>리포트</span>
                 </button>
                 <button className={pathname === routes.management ? 'focused' : null} onClick={handleClickManagement}>
                     <ManagementIcon className='icon' />
                     <span>관리</span>
                 </button>
-                {/* <button className={pathname === routes.notification ? 'focused' : null} onClick={handleClickNotification}>
-                    <NotificationIcon className='icon' />
-                    <span>알림</span>
-                </button> */}
                 <button style={{"cursor":"default"}}>
                     <GuideIcon className='icon' />
                     <span>문서</span>
                 </button>
                 <button className='subButton' onClick={handleClickGuide}>
-                    <h5>사용자 가이드</h5>
+                    <span className='menuGuide'>사용자 가이드</span>
                 </button>
-                <button className={`${pathname === routes.faq ? 'focused' : null} subButton`} onClick={handleClickFAQ}>
-                    <h5>FAQ</h5>
+                <button className={`${pathname === routes.faq ? 'focused' : null}`} onClick={handleClickFAQ}>
+                    <span className='menuFaq'>FAQ</span>
                 </button>
             </div>
             <div className="sidebar-button-frame">

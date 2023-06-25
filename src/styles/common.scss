@@ -114,3 +114,14 @@ $redColor: #FF2020;
     margin-right: 23px;
     margin-bottom: 2.5em;
 }
+
+@media screen and (max-width: 1800px) {
+    .sidebar-button-frame {
+        height: 166px;
+        position: absolute;
+        bottom: 230px;
+        right: 0;
+        margin-right: 10px;
+        margin-bottom: 2.5em;
+    }
+}
