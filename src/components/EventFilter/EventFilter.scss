@@ -46,6 +46,8 @@
         width: 30px;
         height: 166px;
     }
+
+    
 }
 
 .eventFilter-hide {
@@ -108,4 +110,22 @@
         }
     }
 
+}
+
+@media screen and (max-width: 1800px) {
+    .eventFilter,
+    .eventFilter-hide {
+        .filter-button {
+            transform: scale(0.6);
+        }
+
+        .sidebar-button-frame {
+            height: 166px;
+            position: absolute;
+            bottom: 270px;
+            right: 0;
+            margin-right: 10px;
+            margin-bottom: 2.5em;
+        }
+    }
 }
