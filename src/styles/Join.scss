@@ -164,7 +164,7 @@
         }
 
         button[type="submit"] {
-            margin-top: 127px;
+            margin-top: 97px;
         }
     }
 
@@ -198,6 +198,131 @@
 
         button[type="submit"] {
             margin-top: 35px ;
+        }
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .join {
+        height: 550px;
+        margin-top:-350px;
+        button[type="submit"] {
+            @include buttonStyle(100%,  40px);
+        }
+
+        .input-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+    
+            div {
+                position:relative;
+            }
+        }
+
+        .stepImage {
+            width: 412px;
+            height: 55px;
+            margin: 16px -11px 0;
+        }
+        .memberInfo, .confirm{
+            .explain {
+                h2 {
+                    margin-top: 23px;
+                }
+                p {
+                    margin-bottom: 10px;
+                }
+            }
+
+            button[type="submit"] {
+                margin-top: 5px ;
+                margin-bottom: 20px ;
+            }
+    
+        }
+
+        .verifyEmail, .done {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            .sendImage {
+                width: 200px;
+                height: 168px;
+                margin: 10px 0 14px;
+            }
+    
+            .welcomeImage {
+                width: 200px;
+                height: 200px;
+                margin: 18px 0 10px;
+            }
+    
+            .explain {
+                h2, p{
+                    margin: 0 -20px;
+                    text-align: center;
+                }
+        
+                p {
+                    margin-top: 5px;
+                }
+            }
+    
+            button[type="submit"] {
+                margin-top: 25px ;
+            }
+        }
+
+        .termOfUse {
+            h2 {
+                margin: 15px 0 19px;
+    
+                span {
+                    margin-left: 5px;
+                    color: #FF2020;
+                }
+            }
+    
+            .term-area {
+                border: solid#C4CEE1;
+                border-radius: 20px;
+                padding: 20px;
+            }
+    
+            input[type="checkbox"] {
+                display: none;
+            }
+    
+            .check-item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 12px;
+    
+                label {
+                    cursor: pointer;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 13px;
+                }
+    
+                span {
+                    @include notosans(16px, 700);
+                }
+    
+                .arrow {
+                    cursor: pointer;
+                    width: 24px;
+                    height: 24px;
+                    margin-left: auto;
+                }
+            }
+    
+            button[type="submit"] {
+                margin-top: 10px;
+            }
         }
     }
 }
