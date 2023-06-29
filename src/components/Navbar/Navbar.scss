@@ -15,6 +15,9 @@
 
     .eventNav {
         @include flexRow;
+        .navButton{
+            min-width: 150px;
+        }
     }
 
     .user {
