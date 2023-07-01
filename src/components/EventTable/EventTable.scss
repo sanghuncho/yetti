@@ -2,8 +2,6 @@
 
 .eventTable {
     @include flexColumn();
-    //padding-left: 10px;
-    
     .top{
         display: flex;
         align-items: center;
@@ -15,12 +13,10 @@
     .eventTableArea {
         width: fit-content;
         max-height: 397px;
-        // margin-bottom: 27px;
-        margin-left: -130px;
+        margin-left: 150px;
         overflow-y: auto;
         overflow-x: hidden;
         border-radius: 15px;
-        align-items: left;
         &:hover {
             &::-webkit-scrollbar-thumb{
                 background-color: rgba(0,0,0,0.5);
@@ -242,10 +238,13 @@
 
         .eventTableArea {
             //width: fit-content;
-            width: 1100px;
-            margin-left: -40px;
+            //width: 1100px;
+            width: 100%;
+            max-width: 1100px;
+            //margin-left: -40px;
+            margin-left: 170px;
             max-height: 397px;
-            overflow-y: auto;
+            overflow-y: scroll;
             overflow-x: scroll;
             border-radius: 15px;
             align-items: left;

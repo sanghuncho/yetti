@@ -353,13 +353,22 @@ const Event = () => {
                         <NavButton text='검색' clickState={mainCollapse === 'search'} clickEvent={() => handleMainCollapse('search')} isBackColor={true} />
                     </div>
                 </Navbar>
+                {/* {mainCollapse !== null ?
+                    <MainCollapse>
+                        {mainCollapse === 'chart' ? <EventChart chartData={chartData}/> : <EventSearch startDate={startDate} setEndDate={setEndDate} setStartDate={setStartDate} setChart={setChart} setData={setData} setResetTable={setResetTable} setCheckedSearchKey={setCheckedSearchKey} />}
+                    </MainCollapse>
+                    : null
+                } */}
                 {mainCollapse !== null ?
                     <MainCollapse>
                         {mainCollapse === 'chart' ? <EventChart chartData={chartData}/> : <EventSearch startDate={startDate} setEndDate={setEndDate} setStartDate={setStartDate} setChart={setChart} setData={setData} setResetTable={setResetTable} setCheckedSearchKey={setCheckedSearchKey} />}
                     </MainCollapse>
                     : null
                 }
-                <EventTable setTableIndex={setTableIndex} startDate={startDate}  eventData={outputData} resetTable={resetTable} setResetTable={setResetTable} isCollapseOpen={mainCollapse !== null}  />
+                <MainCollapse>
+                    <EventTable setTableIndex={setTableIndex} startDate={startDate}  eventData={outputData} resetTable={resetTable} setResetTable={setResetTable} isCollapseOpen={mainCollapse !== null}  />
+                </MainCollapse>
+                {/* <EventTable setTableIndex={setTableIndex} startDate={startDate}  eventData={outputData} resetTable={resetTable} setResetTable={setResetTable} isCollapseOpen={mainCollapse !== null}  /> */}
             </div>
         </Layout>
     );
